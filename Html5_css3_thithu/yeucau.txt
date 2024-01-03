@@ -1,0 +1,8 @@
+Yêu cầu:
+1. Dàn trang sử dụng các thẻ HTML5 và CSS3, chuẩn kích thước, chuẩn màu sắc thiết kế
+2. Dàn trang theo các thuộc tính display của CSS3
+3. Layout trang web chạy được tốt trên các trình duyệt kích thước khác nhau
+4. Vẽ logo
+5. Nhúng font và gán font và vị trí text tương ứng
+6. Tạo menu và active
+7. Tạo hiệu ứng animation xoay tròn 1 vòng trong 1s khi di chuột vào ảnh sản phẩm

@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-image:url('./img/bg2.png'), 
+                    url('./img/bg3.png'),
+                    url('./img/bg1.jpg');
+    background-size: 30%, 30%, cover;
+    background-position: 0, 40rem, 0;
+    width: 60%;
+    height: 300px;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon #loading{
+    font-size: 35px;
+    color: white;
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.icon::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(79,0,188);
+    background: linear-gradient(45deg, rgba(79,0,188,1) 0%, rgba(198,100,133,1) 38%, rgba(223,205,31,1) 100%);
+    border-radius: 3px;
+    animation: move 1.5s ease-in-out infinite;
+    transition: all 1s;
+}
+@keyframes move {
+    0%, 100%{
+        left: 0;top: 0;
+        background: rgb(79,0,188);
+        background: linear-gradient(45deg, rgba(79,0,188,1) 0%, rgba(198,100,133,1) 38%, rgba(223,205,31,1) 100%);
+    }
+    25%{
+        background: rgb(174,208,238);
+        background: linear-gradient(90deg, rgba(174,208,238,1) 0%, rgba(18,26,226,1) 44%, rgba(17,128,133,1) 100%);
+        left: 150px; top: 0;
+    }
+    50%{
+        left: 150px; top: 150px;
+        background: rgb(238,194,174);
+        background: linear-gradient(90deg, rgba(238,194,174,1) 0%, rgba(18,226,80,1) 44%, rgba(133,17,117,1) 100%);
+    }
+    75%{
+        left: 0; top: 150px;
+        background: rgb(180,75,250);
+        background: linear-gradient(42deg, rgba(180,75,250,0.7654412106639531) 0%, rgba(255,150,233,0.7598389697675946) 50%, rgba(252,176,69,0.8018557764902836) 100%);
+    }
+    
+}

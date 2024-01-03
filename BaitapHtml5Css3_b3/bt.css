@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    height: 400px;
+    background-image: url('img/bg3.png'),
+     url('img/bg2.png'), url('img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: 30%, 30%, 100%;
+    background-position: 700px -10px, 0, 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block svg{
+    font-size: 50px;
+    color: white;
+    /* animation:xoaytron 0.5s linear infinite ; */
+}
+.block svg:hover{
+    animation: xoaytron 3s linear infinite;
+}
+
+/* @keyframes xoaytron {
+    from{
+        transform: rotate(0deg) scale(1);
+    }
+    to{
+        transform: rotate(360deg) scale(2);
+    }
+} */
+
+@keyframes xoaytron {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    50%{
+        transform: rotate(180deg) scale(2);
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.block .item{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block .item::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: dichuyen 2s linear infinite;
+}
+
+@keyframes dichuyen {
+    0%, 100%{
+        top: 0; left: 0;
+    }
+    25%{
+        left: 250px; top: 0;
+    }
+    50%{
+        left: 250px; top: 250px;
+    }
+    75%{
+        left: 0; top: 250px;
+    }
+}
+
+
+.block2{
+    margin: auto;
+    margin-top: 40px;
+    width: 40%;
+    background: rgb(0,33,201);
+    background: linear-gradient(135deg, rgba(0,33,201,1) 0%, rgba(255,163,222,1) 25%, rgba(227,170,200,1) 69%, rgba(27,247,82,1) 100%);
+    height: 300px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.block2 span{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    bottom: 80px;
+    animation: dchuyen 4s ease-in-out infinite;
+}
+
+@keyframes dchuyen {
+    0%{
+        left: 20px;
+        bottom: 80px;
+    }
+    20%{
+        left: 156px;
+        bottom: 170px;
+    }
+    30%{
+        left: 127px;
+        bottom: 78px;
+    }
+    50%{
+        left: 340px;
+        bottom: 191px;
+    }
+    70%{
+        left: 407px;
+        bottom: 118px;
+    }
+    100%{
+        left: 530px;
+        bottom: 192px;
+    }
+}
